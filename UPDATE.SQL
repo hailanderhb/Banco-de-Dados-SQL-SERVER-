@@ -29,8 +29,8 @@ FROM [Curso]
 
 BEGIN TRANSACTION
 
-    DELETE FROM [Categoria]
-
-    WHERE [Id] > 4
+    UPDATE [Categoria]
+    SET [Nome] = 'Backend'
+    WHERE [Id] = 1
 
 COMMIT
