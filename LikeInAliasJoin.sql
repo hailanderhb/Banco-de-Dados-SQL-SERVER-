@@ -27,6 +27,18 @@ FROM [Curso]
 
 
 
+SELECT TOP 100 [Curso].[Id], [Curso].[Nome], [Categoria].[Id] AS [Categoria], [Categoria].[Nome]
+FROM [Curso]
+   LEFT JOIN [Categoria] ON [Curso].[CategoriaId] = [Categoria].[Id]
+ --RIGHT , FULL OUTER
+
+
+SELECT TOP 100 [Id], [Nome]
+FROM [Curso]
+UNION
+SELECT TOP 100 [Id], [Nome]
+FROM [Categoria]
+
 BEGIN TRANSACTION
 
     DELETE FROM [Categoria]
